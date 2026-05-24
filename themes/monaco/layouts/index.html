@@ -1,0 +1,229 @@
+{{ define "main" }}
+
+<!-- ═══ HERO ════════════════════════════════════════════════════ -->
+<section class="hero">
+  <canvas class="hero__canvas" id="network-canvas"></canvas>
+  <div class="hero__content">
+    <div class="fade-up">
+      <div class="hero__eyebrow">Social Scientist · Digital Strategist · Simulation Specialist</div>
+      <h1>Designing <em>digital</em> futures.<br>Together.</h1>
+      <p class="hero__lead">
+        I help universities, hospitals, schools and public organisations navigate
+        digital transformation — not as a technical upgrade, but as a
+        <strong style="color:var(--paper)">culture of change and resilience</strong>.
+      </p>
+      <div class="hero__ctas">
+        <a href="{{ "/projects/" | relURL }}" class="btn btn--gold">Explore Projects</a>
+        <a href="{{ "/contact/" | relURL }}" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero__sidebar fade-up delay-2">
+      <h4>Areas of Expertise</h4>
+      <div class="hero__tags">
+        <span class="hero__tag">Digital Innovation</span>
+        <span class="hero__tag">Open Data</span>
+        <span class="hero__tag">Healthcare Simulation</span>
+        <span class="hero__tag">E-Learning Strategy</span>
+        <span class="hero__tag">VR / AR / 360°</span>
+        <span class="hero__tag">Participative Design</span>
+        <span class="hero__tag">Instructional Design</span>
+        <span class="hero__tag">Science &amp; Tech Assessment</span>
+        <span class="hero__tag">PNRR · Digital PA</span>
+        <span class="hero__tag">Community Building</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STAT STRIP ══════════════════════════════════════════════ -->
+<div class="stat-strip">
+  <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label">Years of Experience</div></div>
+  <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Publications</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Languages</div></div>
+  <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Curiosity</div></div>
+</div>
+
+<!-- ═══ WHAT I DO ════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="eyebrow">What I Do</span>
+    <h2>A bridge between research,<br>technology and people</h2>
+    <div class="divider"></div>
+    <p>I design learning ecosystems, digital strategies and participatory processes that put humans at the centre of technological change.</p>
+  </div>
+  <div class="grid-3">
+
+    <div class="card">
+      <div class="card__icon card__icon--teal">🔬</div>
+      <h3>Simulation &amp; Learning</h3>
+      <p>Medical, organisational and social simulation using VR, AR and immersive 360° environments. From clinical training to institutional resilience exercises.</p>
+      <div class="tag-list">
+        <span class="tag tag--teal">SimLab UniPR</span>
+        <span class="tag tag--teal">Open Access Kits</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__icon card__icon--gold">📡</div>
+      <h3>Open Data &amp; Digital PA</h3>
+      <p>Building open-data observatories and digital infrastructure for public administration — from infection risk monitoring to mental health intelligence platforms.</p>
+      <div class="tag-list">
+        <span class="tag tag--gold">RISVO Project</span>
+        <span class="tag tag--gold">PNRR · MIUR</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__icon card__icon--ink">🤝</div>
+      <h3>Participative Design</h3>
+      <p>Co-designing digital transformation strategies with organisations using Platform Design Toolkit, Three Horizons foresight, and collaborative workshop facilitation.</p>
+      <div class="tag-list">
+        <span class="tag">it-ER Talents</span>
+        <span class="tag">Common Home</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ FEATURE BAND — SIMULATION ═══════════════════════════════ -->
+<div class="feature-band">
+  <div class="feature-band__text" style="background:var(--paper-2);">
+    <span class="eyebrow">Dedicated Expertise</span>
+    <h2>Simulation, Collaboration &amp; Participative Design</h2>
+    <div class="divider"></div>
+    <p style="color:var(--ink-mid);margin-top:1rem;">
+      Over a decade of research at the intersection of immersive technologies and
+      cooperative methodologies — applied in hospitals, universities and public administrations
+      across Italy and Europe.
+    </p>
+    <a href="{{ "/simulation/" | relURL }}" class="btn btn--teal" style="margin-top:2rem;align-self:flex-start;">Discover the Approach →</a>
+  </div>
+  <div class="feature-band__visual">
+    <svg viewBox="0 0 260 260" width="220" height="220" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.85;">
+      <!-- Central hub -->
+      <circle cx="130" cy="130" r="22" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+      <text x="130" y="135" text-anchor="middle" fill="white" font-size="16" font-family="serif">✦</text>
+      <!-- Nodes -->
+      <circle cx="60"  cy="60"  r="10" fill="rgba(196,134,42,0.8)"/>
+      <circle cx="200" cy="60"  r="10" fill="rgba(196,134,42,0.8)"/>
+      <circle cx="60"  cy="200" r="10" fill="rgba(255,255,255,0.5)"/>
+      <circle cx="200" cy="200" r="10" fill="rgba(255,255,255,0.5)"/>
+      <circle cx="130" cy="30"  r="8"  fill="rgba(196,134,42,0.6)"/>
+      <circle cx="30"  cy="130" r="8"  fill="rgba(255,255,255,0.4)"/>
+      <circle cx="230" cy="130" r="8"  fill="rgba(255,255,255,0.4)"/>
+      <circle cx="130" cy="230" r="8"  fill="rgba(196,134,42,0.6)"/>
+      <!-- Lines to centre -->
+      <line x1="60"  y1="60"  x2="114" y2="114" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="200" y1="60"  x2="146" y2="114" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="60"  y1="200" x2="114" y2="146" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="200" y1="200" x2="146" y2="146" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="130" y1="30"  x2="130" y2="108" stroke="rgba(196,134,42,0.5)" stroke-width="1.5"/>
+      <line x1="30"  y1="130" x2="108" y2="130" stroke="rgba(196,134,42,0.5)" stroke-width="1.5"/>
+      <line x1="230" y1="130" x2="152" y2="130" stroke="rgba(196,134,42,0.5)" stroke-width="1.5"/>
+      <line x1="130" y1="230" x2="130" y2="152" stroke="rgba(196,134,42,0.5)" stroke-width="1.5"/>
+      <!-- Outer ring -->
+      <circle cx="130" cy="130" r="100" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none" stroke-dasharray="5 4"/>
+      <!-- Labels -->
+      <text x="130" y="14"  text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8" font-family="monospace">SIMULATION</text>
+      <text x="244" y="134" text-anchor="start"  fill="rgba(255,255,255,0.7)" font-size="8" font-family="monospace">COLLABORATION</text>
+      <text x="16"  y="134" text-anchor="end"    fill="rgba(255,255,255,0.7)" font-size="8" font-family="monospace">DESIGN</text>
+      <text x="130" y="248" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8" font-family="monospace">OPEN DATA</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ═══ WHO I WORK WITH ══════════════════════════════════════════ -->
+<div class="section--dark" style="padding:clamp(4rem,7vw,7rem) 0;">
+  <div class="inner">
+    <div class="section-header section-header--center">
+      <span class="eyebrow" style="color:var(--gold);">Who I Work With</span>
+      <h2 style="color:var(--paper);">Organisations ready to transform</h2>
+      <div class="divider divider--center"></div>
+    </div>
+    <div class="grid-auto" style="margin-top:2.5rem;">
+
+      <div class="card card--dark">
+        <div class="card__icon card__icon--gold" style="font-size:1.6rem;">🏛️</div>
+        <h3>Universities &amp; Research Centres</h3>
+        <p>Designing integrated digital learning ecosystems, open data research programmes and simulation laboratories for higher education and health sciences.</p>
+      </div>
+
+      <div class="card card--dark">
+        <div class="card__icon card__icon--gold" style="font-size:1.6rem;">🏥</div>
+        <h3>Hospitals &amp; Health Authorities</h3>
+        <p>Supporting AUSL and hospital trusts in building data-driven intelligence platforms, clinical simulation programmes and digital upskilling pathways.</p>
+      </div>
+
+      <div class="card card--dark">
+        <div class="card__icon card__icon--gold" style="font-size:1.6rem;">🏫</div>
+        <h3>Schools &amp; the PNRR Ecosystem</h3>
+        <p>Delivering MIUR-certified training on digital teaching methods, immersive technologies and constructivist approaches within Italy's national recovery plan.</p>
+      </div>
+
+      <div class="card card--dark">
+        <div class="card__icon card__icon--gold" style="font-size:1.6rem;">🏢</div>
+        <h3>Enterprises &amp; Public Bodies</h3>
+        <p>Facilitating digital transformation processes through participatory co-design, foresight workshops and technology readiness assessments.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SELECTED PROJECTS ════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-header">
+    <span class="eyebrow">Selected Work</span>
+    <h2>Key projects &amp; research</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="grid-2">
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <span class="eyebrow" style="color:var(--teal);">University of Parma · 2017–2024</span>
+      <h3>RISVO — Open Data for Infection Risk</h3>
+      <p>Principal Investigator on a public engagement project connecting open data, healthcare surveillance, and citizen science — in collaboration with ANIPIO and OnData APS.</p>
+      <a href="{{ "/projects/" | relURL }}" class="btn btn--teal" style="margin-top:1.2rem;font-size:0.7rem;padding:0.6rem 1.2rem;">View Project →</a>
+    </div>
+    <div class="card" style="border-top:3px solid var(--gold);">
+      <span class="eyebrow" style="color:var(--gold);">SimLab · Dept. Medicine &amp; Surgery</span>
+      <h3>SimHub — Medical Simulation Open Platform</h3>
+      <p>Open-source Creative Commons kit library for interactive medical and emergency scenarios, enabling citizens and professionals to engage with simulation learning.</p>
+      <a href="{{ "/simulation/" | relURL }}" class="btn btn--gold" style="margin-top:1.2rem;font-size:0.7rem;padding:0.6rem 1.2rem;color:var(--ink);">Explore Approach →</a>
+    </div>
+    <div class="card" style="border-top:3px solid var(--ink-mid);">
+      <span class="eyebrow">MIUR · PNRR · 2025</span>
+      <h3>Digital Transformation Trainer for Schools</h3>
+      <p>Designing and delivering national training on integrated digital teaching, VR/AR in education, and constructivist digital collaboration for Italian schools.</p>
+      <a href="{{ "/about/" | relURL }}" class="btn btn--ink" style="margin-top:1.2rem;font-size:0.7rem;padding:0.6rem 1.2rem;">About Federico →</a>
+    </div>
+    <div class="card" style="border-top:3px solid var(--teal);">
+      <span class="eyebrow" style="color:var(--teal);">it-ER · ART-ER · 2026</span>
+      <h3>Tea &amp; Design — Ambassador Lab</h3>
+      <p>Co-designed innovation lab event for international talents and returning Italians at UniPR, using Platform Design Toolkit and Three Horizons foresight methodology.</p>
+      <a href="{{ "/projects/" | relURL }}" class="btn btn--teal" style="margin-top:1.2rem;font-size:0.7rem;padding:0.6rem 1.2rem;">View Project →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ QUOTE ════════════════════════════════════════════════════ -->
+<div style="background:var(--paper-2);padding:0;">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:clamp(3rem,6vw,5rem) var(--gap);">
+    <blockquote>
+      <p>Digital transformation is not a technology project. It is a social and cultural one. The tools change; the need for shared meaning, trust and collaborative sense-making does not.</p>
+      <cite>— Federico Monaco, Social Scientist &amp; Digital Innovation Strategist</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ═══ CTA BAND ══════════════════════════════════════════════════ -->
+<div class="section--teal" style="padding:clamp(3rem,6vw,5rem) 0;">
+  <div class="inner" style="text-align:center;">
+    <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Ready to collaborate?</span>
+    <h2 style="color:white;margin-top:0.5rem;">Let's design your<br>digital future together</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto;">Whether you're a hospital trust, university department, school network or enterprise — get in touch to explore how we can work together.</p>
+    <a href="{{ "/contact/" | relURL }}" class="btn btn--gold" style="margin-top:2rem;">Start a Conversation →</a>
+  </div>
+</div>
+
+{{ end }}

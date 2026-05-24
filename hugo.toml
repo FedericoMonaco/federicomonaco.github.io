@@ -1,0 +1,36 @@
+baseURL = "https://yourusername.github.io/federico-monaco/"
+languageCode = "en-us"
+title = "Federico Monaco"
+theme = "monaco"
+
+[params]
+  description = "Social Scientist · Digital Innovation Strategist · Simulation & Learning Specialist"
+  tagline = "Bridging research, technology and people to build resilient digital futures."
+  email = "monaco.federico@gmail.com"
+  phone = "(+39) 347 468 7134"
+  location = "Parma, Italia"
+  linkedin = ""
+  github = ""
+  orcid = ""
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Simulation & Design"
+    url = "/simulation/"
+    weight = 3
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5

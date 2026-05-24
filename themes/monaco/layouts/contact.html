@@ -1,0 +1,152 @@
+{{ define "main" }}
+
+<section class="page-hero">
+  <div class="inner">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>Let's work together</h1>
+    <p class="lead">Whether you're exploring a project, planning a training programme, looking for a facilitator or simply want to exchange ideas — I'd be glad to hear from you.</p>
+  </div>
+</section>
+
+<div class="section">
+  <div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div>
+      <span class="eyebrow">Contact Information</span>
+      <h2 style="font-size:1.8rem;">Based in Parma, working everywhere</h2>
+      <div class="divider" style="margin-bottom:2rem;"></div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">📧</div>
+        <div class="contact-item__text">
+          <strong>Email</strong>
+          <a href="mailto:monaco.federico@gmail.com">monaco.federico@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">📞</div>
+        <div class="contact-item__text">
+          <strong>Phone / WhatsApp</strong>
+          (+39) 347 468 7134
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">📍</div>
+        <div class="contact-item__text">
+          <strong>Primary Location</strong>
+          Via Paolo Baratta, 1 · 43126 Parma (PR), Italia
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">🌐</div>
+        <div class="contact-item__text">
+          <strong>Online</strong>
+          Remote collaboration welcome · English &amp; Italian
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;padding:1.5rem;background:var(--paper-2);border-radius:4px;">
+        <h4 style="font-size:0.85rem;margin-bottom:1rem;color:var(--ink);">I am particularly interested in collaborations around:</h4>
+        <div class="tag-list">
+          <span class="tag tag--teal">Open Data Observatories</span>
+          <span class="tag tag--teal">Medical Simulation</span>
+          <span class="tag tag--gold">PNRR Digital Transformation</span>
+          <span class="tag tag--gold">Participative Design Labs</span>
+          <span class="tag">VR / AR in Healthcare &amp; Education</span>
+          <span class="tag">Public Mental Health Intelligence</span>
+          <span class="tag">Civic Technology</span>
+          <span class="tag">University Research</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form (HTML — functional with Netlify or Formspree) -->
+    <div>
+      <span class="eyebrow">Send a Message</span>
+      <h2 style="font-size:1.8rem;">Start a conversation</h2>
+      <div class="divider" style="margin-bottom:2rem;"></div>
+
+      <form name="contact" method="POST" data-netlify="true" action="/thanks/" style="display:flex;flex-direction:column;gap:1.2rem;">
+        <input type="hidden" name="form-name" value="contact">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">First Name</label>
+            <input type="text" name="first_name" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;transition:border-color var(--trans);" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-2)'">
+          </div>
+          <div>
+            <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">Last Name</label>
+            <input type="text" name="last_name" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;transition:border-color var(--trans);" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-2)'">
+          </div>
+        </div>
+
+        <div>
+          <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">Email</label>
+          <input type="email" name="email" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-2)'">
+        </div>
+
+        <div>
+          <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">Organisation</label>
+          <input type="text" name="organisation" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-2)'">
+        </div>
+
+        <div>
+          <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">I am interested in</label>
+          <select name="interest" style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;appearance:none;">
+            <option value="">Select a topic…</option>
+            <option>Healthcare Simulation Programme</option>
+            <option>Digital Transformation &amp; PNRR</option>
+            <option>Open Data Observatory</option>
+            <option>Participative Design Workshop</option>
+            <option>VR / AR / Immersive Learning</option>
+            <option>University / Research Collaboration</option>
+            <option>Training &amp; Facilitation</option>
+            <option>Something else</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);display:block;margin-bottom:0.4rem;">Message</label>
+          <textarea name="message" rows="5" required style="width:100%;padding:0.75rem 1rem;border:1px solid var(--paper-2);border-radius:var(--radius);font-family:var(--sans);font-size:0.95rem;background:var(--white);color:var(--ink);outline:none;resize:vertical;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-2)'"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--gold" style="align-self:flex-start;">Send Message →</button>
+      </form>
+
+      <p style="margin-top:1.5rem;font-size:0.82rem;color:var(--ink-mid);">
+        You can also email directly at <a href="mailto:monaco.federico@gmail.com">monaco.federico@gmail.com</a>.<br>
+        I respond within 2 business days.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── LANGUAGES / AVAILABILITY ──────────────────────────────── -->
+<div class="section--paper2" style="padding:clamp(2.5rem,5vw,4rem) 0;">
+  <div class="inner">
+    <div class="grid-3" style="text-align:center;">
+      <div>
+        <div style="font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--teal);">🇮🇹 🇬🇧</div>
+        <h4 style="margin-top:0.8rem;margin-bottom:0.3rem;">Italian &amp; English</h4>
+        <p style="color:var(--ink-mid);font-size:0.88rem;">All projects can be delivered in Italian or English. Presentations, workshops and written deliverables in both.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--gold);">🌐</div>
+        <h4 style="margin-top:0.8rem;margin-bottom:0.3rem;">Remote &amp; On-Site</h4>
+        <p style="color:var(--ink-mid);font-size:0.88rem;">Available for on-site work across Emilia-Romagna and Italy, and remotely for national and international collaborations.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--ink-mid);">📋</div>
+        <h4 style="margin-top:0.8rem;margin-bottom:0.3rem;">Open to Partnerships</h4>
+        <p style="color:var(--ink-mid);font-size:0.88rem;">I am open to EU project consortia, research partnerships, co-funded regional initiatives and institutional framework agreements.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

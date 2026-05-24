@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="inner">
+    <div class="logo">Federico <span>Monaco</span>
+      <p style="font-family:var(--mono);font-size:0.68rem;color:var(--ink-light);margin-top:0.3rem;letter-spacing:0.08em;">Social Scientist · Digital Innovation Strategist</p>
+    </div>
+    <nav class="footer-links">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <p>© {{ now.Year }} Federico Monaco · Parma, Italia</p>
+  </div>
+</footer>

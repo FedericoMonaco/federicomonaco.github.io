@@ -1,0 +1,9 @@
+name = "Monaco"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Personal site theme for Federico Monaco"
+homepage = "https://github.com"
+min_version = "0.110.0"
+
+[author]
+  name = "Federico Monaco"

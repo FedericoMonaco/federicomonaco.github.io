@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="inner">
+    <span class="eyebrow">{{ .Section | default "Page" }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<div class="section">
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
