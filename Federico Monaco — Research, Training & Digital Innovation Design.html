@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Federico Monaco — Research, Training & Digital Innovation Design</title>
+<style>
+:root{--ink:#111;--soft:#555;--line:#d9d9d9;--red:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{color-scheme:light;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,.mono{font-family:"Courier New",Courier,monospace;font-weight:700;letter-spacing:-.02em}
+a{color:inherit;text-decoration-color:var(--red);text-underline-offset:3px}
+a:hover{background:var(--ink);color:#fff;text-decoration:none}
+nav{position:sticky;top:0;background:#fffe;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5;display:flex;gap:1.4rem;padding:.7rem 1.5rem;overflow-x:auto;font:14px "Courier New",monospace;white-space:nowrap}
+nav b{margin-right:auto}nav a{text-decoration:none}
+#bar{position:fixed;left:0;top:0;height:3px;background:var(--red);width:0;z-index:9}
+header{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:4rem 1.5rem;max-width:1000px;margin:0 auto}
+canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+header>*:not(canvas){position:relative;z-index:1}
+.tag{font:14px "Courier New",monospace;color:var(--soft)}
+h1{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.05;margin:.4em 0}
+.cursor{display:inline-block;width:.55em;height:.9em;background:var(--red);vertical-align:-.1em;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+.lead{max-width:36em;font-size:1.2rem}
+main{max-width:1000px;margin:0 auto;padding:0 1.5rem}
+section{padding:4.5rem 0;border-top:1px solid var(--ink)}
+h2{font-size:1.9rem;margin:0 0 .3em}
+h2::before{content:attr(data-n);color:var(--red);margin-right:.6rem}
+.grid,.pillars{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));margin-top:1.8rem}
+.card{border:1px solid var(--ink);padding:1.3rem;transition:transform .2s,box-shadow .2s;background:#fff}
+.card:hover{transform:translate(-4px,-4px);box-shadow:6px 6px 0 var(--ink)}
+.card h3,.pillar h3{margin:.1em 0 .4em;font-size:1.1rem}
+.card p,.pillar p{margin:0}
+.card .mono{font-size:12px;color:var(--red);text-transform:uppercase;letter-spacing:.08em}
+mark{background:linear-gradient(transparent 55%,#ffe14d 55%);color:inherit;padding:0 .1em}
+.pillar{padding:1.4rem;border-left:4px solid var(--red);background:#fafafa}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0}
+.chip{font:13px "Courier New",monospace;border:1px solid var(--ink);background:#fff;color:var(--ink);padding:.3rem .7rem;cursor:pointer;border-radius:0}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff}
+.pub,.tl{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px dashed var(--line)}
+.pub.hide{display:none}
+.yr{font:700 1.15rem "Courier New",monospace;color:var(--red)}
+.pub h3,.tl h3{font-size:1.02rem;margin:0 0 .2em;line-height:1.35}
+.pub p,.tl p{margin:0;color:var(--soft);font-size:.92rem}
+.stamp{display:inline-block;border:2px solid var(--red);color:var(--red);font:700 12px "Courier New",monospace;padding:.1rem .5rem;transform:rotate(-3deg);margin-left:.5rem}
+.rule{margin-top:2rem;font:14px "Courier New",monospace;color:var(--soft)}
+footer{border-top:1px solid var(--ink);padding:3rem 1.5rem;text-align:center;font:14px "Courier New",monospace}
+.reveal{opacity:0;transform:translateY(14px);transition:.7s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.cursor{animation:none}html{scroll-behavior:auto}}
+@media(max-width:600px){.pub,.tl{grid-template-columns:1fr;gap:.2rem}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><b>F.MONACO/</b><a href="#profile">profile</a><a href="#focus">focus</a><a href="#activities">activities</a><a href="#timeline">timeline</a><a href="#publications">publications</a><a href="#contact">contact</a></nav>
+
+<header>
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="tag">// social scientist · digital learning strategist · Parma, Italy</div>
+<h1><span id="typed"></span><span class="cursor"></span></h1>
+<p class="lead">I research how people learn, decide and cooperate under pressure — and design the <mark>methods and digital tools</mark> that help organizations, emergency and high-specialization teams and communities do it better.</p>
+<p class="tag">↓ move the cursor: the network reacts to you.</p>
+</header>
+
+<main>
+<section id="profile" class="reveal">
+<h2 data-n="01.">WHO I AM</h2>
+<p>I am <strong>Federico Monaco</strong>: sociologist (PhD in Social and Political Systems, University of Parma; degree in Sociology, La Sapienza) with twenty years across universities, hospitals, public administration, EU institutions and space-analog missions. My thread: <mark>turning knowledge into practice that teams can repeat</mark> — through simulation, open data, immersive and distance learning, and facilitation.</p>
+<p>Fluent English (C2), plus Dutch, French and German. Tools of the trade: Moodle, Blender, Gravity Sketch, WordPress, Drupal, GitHub, Google Workspace.</p>
+<div class="grid">
+<div class="card"><span class="mono">Now · public health</span><h3>AUSL Parma</h3><p>Administrative assistant, Primary Care Department: community-house services, procedures for EU and non-EU citizens, process manuals and reporting.</p></div>
+<div class="card"><span class="mono">Now · e-learning</span><h3>Frog Learning</h3><p>Distance-learning infrastructure and design, UI/UX consulting, technology feasibility studies and articles.</p></div>
+<div class="card"><span class="mono">Now · community</span><h3>Common Home APS</h3><p>Co-founder and intercultural facilitator since 2022: tinkering workshops, DIWO courses, participatory practices.</p></div>
+</div>
+</section>
+
+<section id="focus" class="reveal">
+<h2 data-n="02.">WHAT I DO BEST</h2>
+<div class="pillars">
+<div class="pillar"><h3>Research</h3><p>Open-data observatories, bibliometrics, ethnography (virtual ethnographer in an EU Horizon 2020 project at CERN), simulation studies. I make collective behaviour <mark>visible and measurable</mark>. Research fellow at SimLab, University of Parma, 2017–2024.</p></div>
+<div class="pillar"><h3>Training</h3><p>University lecturer 2013–2024 in online collaboration and health sociology; digital-transformation trainer for schools (MIUR, PNRR, 2025); VR, AI and serious-games labs for health professions; MOOCs from MIT, Stanford, McGill.</p></div>
+<div class="pillar"><h3>Methodology design</h3><p>Open-licensed simulation kits for emergency and urgent care (SimHub), co-design and Team Based Learning, digital team building for an <mark>astronaut analog mission</mark> in the Utah desert (SMOPS, MDRS), open data for infection risk with nurses’ associations.</p></div>
+</div>
+</section>
+
+<section id="activities" class="reveal">
+<h2 data-n="03.">ACTIVITIES</h2>
+<div class="grid">
+<div class="card"><span class="mono">Principal Investigator</span><h3>ODASM</h3><p>Open-data observatory on mental health in the province of Parma, with Progetto Itaca Parma ODV and the University of Parma.</p></div>
+<div class="card"><span class="mono">Emergency &amp; simulation</span><h3>SimHub &amp; SIMLAB 360</h3><p>Open-access kits with interactive scenarios under Creative Commons, VR for remote simulation, citizen engagement in medical-surgical and emergency simulation.</p></div>
+<div class="card"><span class="mono">Space</span><h3>Mars Planet · SMOPS</h3><p>Project manager (2020–2022): outreach, data-flow analysis, digital team building and simulation support for the Italian analog mission.</p></div>
+<div class="card"><span class="mono">Facilitation</span><h3>ART-ER · it-ER Lab Parma</h3><p>“Tea &amp; Design” co-design lab in English for international talents: ice-breaking, brainstorming, thematic co-design, plenary.</p></div>
+<div class="card"><span class="mono">Digital transformation</span><h3>MIUR · PNRR trainer</h3><p>Courses on integrated digital teaching and school-organization transformation: VR/AR/MR, Blender, Unity, Sketchfab.</p></div>
+<div class="card"><span class="mono">Industry</span><h3>Knowledge management</h3><p>Program management, technology and support reporting, innovation and digitalization facilitation for a pharmaceutical HQ (2026).</p></div>
+</div>
+</section>
+
+<section id="timeline" class="reveal">
+<h2 data-n="04.">TIMELINE</h2>
+<div class="tl"><div class="yr">2026–</div><div><h3>Administrative assistant — AUSL Parma</h3><p>Primary Care Department, Langhirano.</p></div></div>
+<div class="tl"><div class="yr">2024–</div><div><h3>Distance-learning infrastructure expert — Frog Learning</h3><p>Knowledge Manager ICT for a pharmaceutical client, Feb–Jun 2026.</p></div></div>
+<div class="tl"><div class="yr">2022–</div><div><h3>Co-founder — Common Home APS</h3><p>Intercultural facilitation, DIWO, tinkering workshops.</p></div></div>
+<div class="tl"><div class="yr">2020–2022</div><div><h3>Project Manager — Mars Planet</h3><p>SMOPS Space Medicine OperationS analog mission.</p></div></div>
+<div class="tl"><div class="yr">2017–2024</div><div><h3>Research fellow — SimLab, University of Parma</h3><p>E-learning and simulation in medicine and surgery; SimHub; open data on infection risk.</p></div></div>
+<div class="tl"><div class="yr">2013–2024</div><div><h3>Lecturer — University of Parma</h3><p>Online collaboration methods; Sociology of Health (2014–16, #socialnursery community).</p></div></div>
+<div class="tl"><div class="yr">2016–2017</div><div><h3>European Parliament assistant · virtual ethnographer at CERN</h3><p>Science, technology &amp; society advisory; Scimpulse / OpenCare, Horizon 2020.</p></div></div>
+<div class="tl"><div class="yr">2005–2016</div><div><h3>Educator, HR training services, e-learning admin, tutor</h3><p>Hospital-university HR training; Erasmus Mundus DILL master tutor; social-care educator.</p></div></div>
+</section>
+
+<section id="publications" class="reveal">
+<h2 data-n="05.">PUBLICATIONS</h2>
+<p>Journals, chapters and congress papers, including those presented with Mars Planet at the International Astronautical Congress (IAC). Filter by theme:</p>
+<div class="chips" role="group" aria-label="Filter publications">
+<button class="chip" data-f="all" aria-pressed="true">all</button>
+<button class="chip" data-f="ai" aria-pressed="false">AI</button>
+<button class="chip" data-f="data" aria-pressed="false">open data</button>
+<button class="chip" data-f="simulation" aria-pressed="false">simulation</button>
+<button class="chip" data-f="health" aria-pressed="false">health</button>
+<button class="chip" data-f="community" aria-pressed="false">communities</button>
+</div>
+<div id="pubs">
+<article class="pub" data-t="ai data"><div class="yr">2026</div><div><h3>Ethical Imaginaries of Geospatial Artificial Intelligence</h3><p>Chapter in <i>The Ethical Landscape of AI</i>, IGI Global · <a href="https://doi.org/10.4018/979-8-3373-2597-2.ch010">doi</a></p></div></article>
+<article class="pub" data-t="simulation health"><div class="yr">2024</div><div><h3>Assessing satisfaction in simulation among nursing students (SSE-IT)</h3><p>Alberti et al. · <i>BMC Nursing</i> 23 · <a href="https://doi.org/10.1186/s12912-024-01974-1">doi</a></p></div></article>
+<article class="pub" data-t="ai health"><div class="yr">2024</div><div><h3>AI and Big Data: Nursing practitioners’ views on the future of healthcare education</h3><p>Bonacaro et al. · Nursing Informatics 2024, Manchester · <a href="https://doi.org/10.3233/shti240134">doi</a></p></div></article>
+<article class="pub" data-t="simulation health community"><div class="yr">2023</div><div><h3>Simulare le interprofessionalità</h3><p>Chapter in <i>Lavorare insieme per la salute</i>, Rede UNIDA · <a href="http://dx.doi.org/10.18310/9786554620765">doi</a></p></div></article>
+<article class="pub" data-t="data health community"><div class="yr">2023</div><div><h3>Understanding chronic pain in the ubiquitous community: the role of open data</h3><p>Monaco, Georgiadis, Chatsiou, Bonacaro · <i>Frontiers in Pain Research</i> · <a href="https://doi.org/10.3389/fpain.2023.1208513">doi</a></p></div></article>
+<article class="pub" data-t="data health"><div class="yr">2023</div><div><h3>Could the COVID-19 Open Data Strategy be adapted to other global health threats?</h3><p>Bibliometric analysis · <i>Malaysian Journal of Nursing</i> 15(1) · <a href="https://doi.org/10.31674/mjn.2023.v15i01.017">doi</a></p></div></article>
+<article class="pub" data-t="ai health"><div class="yr">2023</div><div><h3>Artificial Intelligence and Big Data: nurses’ views on the future of healthcare and education</h3><p>Bonacaro et al. · RCN International Nursing Research Conference · <a href="https://hdl.handle.net/11381/2967356">record</a></p></div></article>
+<article class="pub" data-t="data simulation health"><div class="yr">2022</div><div><h3>Digital Health Earth for Covid-19: simulating pandemic emergency plan by open data from space applications</h3><p>IAC 2022 · <a href="https://p.iafastro.directory/iac/paper/id/70990/summary/">record</a></p></div></article>
+<article class="pub" data-t="data community"><div class="yr">2022</div><div><h3>“Space2030” Agenda: Space Economy’s challenges and SDGs’ opportunities</h3><p>Del Mastro, Monaco, Bordacchini, Tewari · IAC-22 · <a href="https://iafastro.directory/iac/archive/browse/IAC-22/E3/1/71000/">record</a></p></div></article>
+<article class="pub" data-t="data simulation health"><div class="yr">2021</div><div><h3>Digital Health Earth: towards a global healthcare management geolocating human health condition by means of space technology</h3><p>Del Mastro, Monaco, Eremchenko, Nelson · <i>Geocontext</i> 8(1) · <a href="https://geo-context.org/index.php/geocontext/article/view/54">journal</a></p></div></article>
+<article class="pub" data-t="data simulation"><div class="yr">2021</div><div><h3>Simulating Gagarin’s Gaze: the charm of a digital Earth for a sustainable planet</h3><p>IAC-21 · <a href="https://iafastro.directory/iac/paper/id/66398/summary/">record</a></p></div></article>
+<article class="pub" data-t="simulation community"><div class="yr">2020</div><div><h3>Simulation of off-world communities by design of standardised learning procedures</h3><p>Monaco, Del Mastro · IAC 2020 · <a href="https://iafastro.directory/iac/paper/id/59840/summary/">record</a></p></div></article>
+<article class="pub" data-t="community simulation"><div class="yr">2019</div><div><h3>Deep Space Learning – Disruption Tolerant Networking for interplanetary communities of practice</h3><p>IAC-19 · <a href="https://iafastro.directory/iac/paper/id/52937/summary/">record</a></p></div></article>
+<article class="pub" data-t="community"><div class="yr">2019</div><div><h3>Soft power as strategy of local engagement for simulation centers: the Mars City project</h3><p>Mars to Earth European Conference, Milan</p></div></article>
+<article class="pub" data-t="simulation"><div class="yr">2018</div><div><h3>Virtual Reality for Multi-User Experience in Space Missions</h3><p>Del Mastro et al. · IAC-18 · <a href="https://iafastro.directory/iac/archive/browse/IAC-18/A3/IP/46353/">record</a></p></div></article>
+<article class="pub" data-t="community"><div class="yr">2016</div><div><h3>Open Knowledge in Mars Missions: communication boundaries and collaboration</h3><p>Monaco, Schlacht · European Mars Conference EMC16, Bergamo</p></div></article>
+<article class="pub" data-t="health community"><div class="yr">2016</div><div><h3>A Learning Ecosystem for Healthcare Professions</h3><p>Monaco, Sarli · EMEMITALIA Multiconference on eLearning, Modena</p></div></article>
+<article class="pub" data-t="community"><div class="yr">2009</div><div><h3>Gli Anelli di Borromeo — Materia, Conoscenza, Società</h3><p>PhD dissertation, University of Parma · <a href="http://hdl.handle.net/1889/1016">repository</a></p></div></article>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<h2 data-n="06.">CONTACT</h2>
+<p>Need a research partner, trainer or methodology designer for your team or community? <a href="mailto:monaco.federico@gmail.com">monaco.federico@gmail.com</a> <span class="stamp">OPEN TO COLLABORATE</span></p>
+</section>
+</main>
+<footer>© <span id="y"></span> Federico Monaco — typed, not generated.</footer>
+
+<script>
+(function(){var t="Designing how teams learn.",el=document.getElementById("typed"),i=0;
+if(matchMedia("(prefers-reduced-motion:reduce)").matches){el.textContent=t;return}
+(function k(){el.textContent=t.slice(0,i++);if(i<=t.length)setTimeout(k,55+Math.random()*80)})();})();
+document.getElementById("y").textContent=new Date().getFullYear();
+var bar=document.getElementById("bar");
+addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("in")})},{threshold:.05});
+document.querySelectorAll(".reveal").forEach(function(s){io.observe(s)});
+document.querySelectorAll(".chip").forEach(function(c){c.onclick=function(){
+document.querySelectorAll(".chip").forEach(function(o){o.setAttribute("aria-pressed",o===c)});
+var f=c.dataset.f;document.querySelectorAll(".pub").forEach(function(p){p.classList.toggle("hide",f!=="all"&&p.dataset.t.indexOf(f)<0)})}});
+(function(){
+var cv=document.getElementById("net"),x=cv.getContext("2d"),W,H,N=[],m={x:-999,y:-999},L=["research","training","design","emergency teams","communities","open data","simulation","learning"];
+function size(){var r=cv.getBoundingClientRect();W=cv.width=r.width;H=cv.height=r.height;N=[];var n=Math.round(W*H/22000);for(var i=0;i<n;i++)N.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,l:i<L.length?L[i]:null})}
+size();addEventListener("resize",size);
+cv.parentNode.addEventListener("mousemove",function(e){var r=cv.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top});
+function draw(){x.clearRect(0,0,W,H);
+N.forEach(function(a){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;var dx=m.x-a.x,dy=m.y-a.y,d=Math.hypot(dx,dy);if(d<160&&d>1){a.x+=dx/d*.6;a.y+=dy/d*.6}});
+for(var i=0;i<N.length;i++)for(var j=i+1;j<N.length;j++){var d=Math.hypot(N[i].x-N[j].x,N[i].y-N[j].y);if(d<120){x.strokeStyle="rgba(17,17,17,"+(1-d/120)*.35+")";x.beginPath();x.moveTo(N[i].x,N[i].y);x.lineTo(N[j].x,N[j].y);x.stroke()}}
+N.forEach(function(a){x.fillStyle=a.l?"#b3261e":"#111";x.beginPath();x.arc(a.x,a.y,a.l?3.5:2,0,7);x.fill();if(a.l){x.font="12px 'Courier New',monospace";x.fillStyle="#555";x.fillText(a.l,a.x+7,a.y+4)}});
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)requestAnimationFrame(draw)}
+draw();})();
+</script>
+</body>
+</html>
